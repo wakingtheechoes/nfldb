@@ -40,6 +40,8 @@ teams1 = [
 
 teams2 = [
     ['LA', 'Los Angeles', 'Rams', 'Los Angeles Rams', 'L.A.'],
+    ['LAC', 'Los Angeles', 'Chargers', 'Los Angeles Chargers', 'L.A.C'],
+    ['JAX', 'Jacksonville', 'Jaguars', 'Jacksonville Jaguars', 'JAC'],
 ]
 
 
@@ -49,7 +51,7 @@ def standard_team(team):
     known by nfldb (case insensitive). If no team can be found, then
     `"UNK"` is returned.
     """
-    if not team or team.lower() == 'new york':
+    if not team or team.lower() == 'new york' or team.lower() == 'los angeles':
         return 'UNK'
 
     team = team.lower()
